@@ -30,6 +30,16 @@ const commentdata = [
         comment_text: "Banana",
         user_id: 3,
         post_id: 2
+    },
+    {
+        comment_text: "Test 1",
+        user_id: 3,
+        post_id: 3
+    },
+    {
+        comment_text: "Test 2",
+        user_id: 2,
+        post_id: 3
     }
 ]
 const postdata = [
@@ -47,10 +57,15 @@ const postdata = [
         title: "Peanuts",
         post_content: "Dangerous",
         user_id: 2
+    },
+    {
+        title: "Apples",
+        post_content: "Yummy",
+        user_id: 1
     }
 ]
 
-const seedUsers = () => User.bulkCreate(userdata);
+const seedUsers = () => User.bulkCreate(userdata, {individualHooks: true});
 const seedComments = () => Comment.bulkCreate(commentdata);
 const seedPosts = () => Post.bulkCreate(postdata);
 

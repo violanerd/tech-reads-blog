@@ -19,8 +19,8 @@ router.get('/:id', async (req, res) => {
     console.log(req.params.id)
     try {
         const userData = await User.findByPk(req.params.id, {
-            attributes: {exclude: ['password']},
-            include: [{model: Post}]
+            //attributes: {exclude: ['password']},
+            include: [{model: Post}, {model: Comment}]
 
         })
                 
@@ -33,4 +33,23 @@ router.get('/:id', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+// Create new user api/users
+router.post('/', async (req, res) => {})
+
+// LOGIN /api/users/login
+router.post('/login', async (req, res) =>{})
+
+// LOGOUT
+// router.post('/logout', (req, res) => {
+//     if (req.session.loggedIn){
+//         req.session.destroy(() => {
+//             res.status(204).end();
+//         })
+//     } else {
+//         res.status(404).end();
+//     }
+// })
+
+
 module.exports = router;
