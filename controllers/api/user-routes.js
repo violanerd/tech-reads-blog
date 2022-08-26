@@ -16,12 +16,14 @@ router.get('/', async (req, res) => {
 
 //GET api/users/:id 
 router.get('/:id', async (req, res) => {
+    console.log(req.params.id)
     try {
-        const userData = await User.findOne({
-            where: { id: req.params.id },
-            //attributes: {exclude: ['password']},
-            //include: [{Post}]
+        const userData = await User.findByPk(req.params.id, {
+            attributes: {exclude: ['password']},
+            include: [{model: Post}]
+
         })
+                
         if (!userData){
             res.status(400).json({message: 'No user found with that id'})
             return;
