@@ -15,18 +15,18 @@ router.get('/', async (req, res) => {
 });
 
 //GET api/comments/:id 
-//will I need this? 
-router.get('/:id', async (req, res) => {
+// --- don't need this route, attached to post get
+
+//POST create comment api/comments
+router.post('/', async (req, res) => {
     
     try {
-        const commentData = await Comment.findByPk(req.params.id, {
-            include: [{model: User}, {model: Post}]
-
+        const commentData = await Comment.create({
+            comment_text: req.body.comment_text,
+            post_id: req.body.post_id,
+            user_id: req.body.user_id
+            // req.session.user_id
         })
-        if (!commentData){
-            res.status(400).json({message: 'No comment found with that id'})
-            return;
-        }
         res.status(200).json(commentData);
     } catch (err) {
         res.status(500).json(err);
