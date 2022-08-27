@@ -1,1 +1,13 @@
-<div>Testing, you are on the homepage</div>
+<div class="post-list">
+    {{#each posts}}
+    <article class="post">
+        <div class="title">
+            <a href="api/posts/{{id}}" target="_blank">
+            <h4>{{title}}<span> Posted by {{user.username}} on {{createdAt}}</span></h4></a>
+        </div>
+        <div class="post-content">
+            {{post_content}}
+        </div>
+    </article>
+    {{/each}}
+</div>
