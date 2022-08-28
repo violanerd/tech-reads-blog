@@ -9,3 +9,8 @@
 header>nav a, header>nav a:visited {
     border: none;
 }
+.login-form {
+    border: 1px solid gray;
+    padding: 1rem;
+    border-radius: 15px;
+}
