@@ -2,8 +2,8 @@
     {{#each posts}}
     <article class="post">
         <div class="title">
-            <a href="api/posts/{{id}}" target="_blank">
-            <h4>{{title}}<span> Posted by {{user.username}} on {{createdAt}}</span></h4></a>
+            <a href="post/{{id}}">
+            <h4>{{title}}</h4><span>Posted by {{user.username}} on {{createdAt}}</span></a>
         </div>
         <div class="post-content">
             {{post_content}}

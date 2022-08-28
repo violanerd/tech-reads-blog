@@ -1,6 +1,12 @@
 .title {
     background-color: lightgrey;
     padding: 0.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+span {
+    font-size: small;
 }
 .post-content {
     padding: 0.3rem;
@@ -13,4 +19,7 @@ header>nav a, header>nav a:visited {
     border: 1px solid gray;
     padding: 1rem;
     border-radius: 15px;
+}
+hr {
+    border: solid 1rem;
 }

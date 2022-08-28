@@ -1,0 +1,33 @@
+<article class="post">
+    <div class="title">
+        <h4>{{post.title}}</h4><span>Posted by {{post.user.username}} on {{post.createdAt}}</span>
+    </div>
+    <div class="post-content">
+        {{post.post_content}}
+    </div>
+</article>
+
+<div class="comments">
+    {{#each post.comments}}
+    <article class="comment">
+        <div class="top-bar"><hr></div>
+        <div class="text">
+            {{comment_text}}
+        </div>
+        <div class="comment-author">
+            --{{user.username}}, {{createdAt}}
+        </div>
+    </article>
+    {{/each}}
+</div>
+
+<form class="comment-form">
+    <article class="comment">
+        <div class="top-bar"><hr></div><!-- got rid of article, experimenting wiht hr-->
+        <p>Comment</p>
+        <textarea name="comment-body"></textarea>
+        <button type="submit">Add Comment</button>
+        
+    </article>
+</form>
+<script src="/js/comment.js"></script>
