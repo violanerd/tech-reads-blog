@@ -42,7 +42,12 @@ router.post('/', async (req, res) => {
             password: req.body.password
         });
         // req session stuff here
-        res.status(200).json(userData);
+        req.session.save(() => {
+            req.session.user_id = userData.id;
+            req.session.username = userData.username;
+            req.session.loggedIn = true;
+            res.status(200).json({user: userData, message: "You are signed up!"})
+        })
     } catch (err) {
         res.status(500).json(err);
     }
@@ -59,13 +64,18 @@ router.post('/login', async (req, res) =>{
             res.status(400).json({message: "No user found with this username"})
             return;
         }
-        const validPassword = await userData.checkPassword(req.body.password);
+        const validPassword = userData.checkPassword(req.body.password);
         if (!validPassword) {
             res.status(400).json({message: "Incorrect password"})
             return;
         }
         // req.session stuff here
-        res.status(200).json({user: userData, message: "You are logged in! "})
+        req.session.save(() => {
+            req.session.user_id = userData.id;
+            req.session.username = userData.username;
+            req.session.loggedIn = true;
+            res.status(200).json({user: userData, message: "You are logged in!"})
+        })
     } catch (err){
         res.status(500).json(err);
     }
