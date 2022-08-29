@@ -33,8 +33,6 @@ router.get('/edit/:id', async (req, res) => {
         res.status(500).json(err)
     }
 })
-// delete a post /dashboard/edit/:id
-
 
 // create a new post /dashboard/new
 router.get('/new', (req, res) => {
