@@ -21,6 +21,7 @@
     {{/each}}
 </div>
 
+{{#if loggedIn}}
 <form class="comment-form">
     <article class="comment">
         <div class="top-bar"><hr></div><!-- got rid of article, experimenting wiht hr-->
@@ -31,3 +32,4 @@
     </article>
 </form>
 <script src="/js/comment.js"></script>
+{{/if}}

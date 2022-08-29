@@ -13,6 +13,7 @@ async function commentSubmitHandler(event) {
             }),
             headers: {'Content-Type': 'application/json'}
         })
+        console.log(response);
         if (response.ok){
             document.location.reload();
         }
@@ -20,7 +21,7 @@ async function commentSubmitHandler(event) {
             alert(response.statusText)
         }
     } else {
-        alert("Please include a comment!")
+        alert(response.statusText, "Please include a comment!")
     }
 }
 

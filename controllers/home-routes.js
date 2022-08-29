@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Comment} = require('../models');
-
+//const withAuth = require('../utils/withAuth')
 
 
 router.get('/', async (req, res) => {
@@ -27,7 +27,7 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-router.get('/post/:id', async(req,res) => {
+router.get('/post/:id', async(req,res) => { // added withauth here to test
     try {
         const postData = await Post.findByPk(req.params.id, {
             include: [
@@ -47,7 +47,9 @@ router.get('/post/:id', async(req,res) => {
             return;
         }
         const post = postData.get({ plain: true });
-        res.render('single-post', {post})
+        res.render('single-post', {
+            post,
+            loggedIn: req.session.loggedIn})
     } catch (err) {
         res.status(500).json(err);
     }
