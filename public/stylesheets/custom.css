@@ -23,3 +23,11 @@ header>nav a, header>nav a:visited {
 hr {
     border: solid 1rem;
 }
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+button#create-post {
+    width: 100%;
+}

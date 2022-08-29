@@ -1,0 +1,12 @@
+<div class="post-list">
+    {{#each posts}}
+    <article class="post">
+        <div class="title">
+            <a href="post/{{id}}">
+            <h4>{{title}}</h4><span>{{createdAt}}</span></a>
+        </div>
+    </article>
+    {{/each}}
+</div>
+
+{{> create-post}}
