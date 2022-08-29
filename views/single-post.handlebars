@@ -1,6 +1,6 @@
 <article class="post">
     <div class="title">
-        <h4>{{post.title}}</h4><span>Posted by {{post.user.username}} on {{post.createdAt}}</span>
+        <h4>{{post.title}}</h4><span>Posted by {{post.user.username}} on {{format_date post.createdAt}}</span>
     </div>
     <div class="post-content">
         {{post.post_content}}
@@ -8,24 +8,23 @@
 </article>
 
 <div class="comments">
-    {{#each post.comments}}
     <article class="comment">
-        <div class="top-bar"><hr></div>
-        <div class="text">
+        <div class="top-bar">Comments</div><!-- got rid of  hr-->
+        {{#each post.comments}}
+        <div class="comment-text">
             {{comment_text}}
         </div>
         <div class="comment-author">
-            --{{user.username}}, {{createdAt}}
+            --{{user.username}}, {{format_date createdAt}}
         </div>
+        {{/each}}
     </article>
-    {{/each}}
 </div>
 
 {{#if loggedIn}}
 <form class="comment-form">
     <article class="comment">
-        <div class="top-bar"><hr></div><!-- got rid of article, experimenting wiht hr-->
-        <p>Comment</p>
+        <div class="top-bar">Enter Your Comment</div><!-- got rid of article, experimenting wiht hr-->
         <textarea name="comment-body"></textarea>
         <button type="submit">Add Comment</button>
         

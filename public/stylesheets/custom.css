@@ -1,9 +1,10 @@
 .title {
     background-color: lightgrey;
-    padding: 0.2rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 50px;
 }
 span {
     font-size: small;
@@ -30,4 +31,17 @@ hr {
 }
 button#create-post,button#update-post,button#delete-post {
     width: 100%;
+}
+.comment-author {
+    margin-bottom: 1rem;
+    font-size: small;
+}
+.comment-text {
+    font-size: smaller;
+}
+div.top-bar {
+    background-color: var(--border);
+    margin: 1rem auto;
+    padding: 0.5rem;
+    font-weight: bold;
 }
