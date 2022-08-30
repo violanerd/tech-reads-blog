@@ -1,7 +1,7 @@
 async function logoutBtnHandler(event) {
     event.preventDefault();
     
-    const response = await fetch('http://localhost:3001/api/users/logout', {
+    const response = await fetch('/api/users/logout', {
         method: "POST",
         headers: {'Content-Type': 'application/json'}
     })

@@ -15,7 +15,7 @@ npm i
 ~~~
 ## Usage
 
-Open the app on heroku here: https://dry-brushlands-70423.herokuapp.com/
+Open the app on heroku here: https://dry-tor-56763.herokuapp.com/
   
 ![](./images/homepage.png)
 ![](./images/dashboard.png)
