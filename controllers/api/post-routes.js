@@ -1,18 +1,8 @@
 const router = require('express').Router();
 const { User, Post, Comment} = require('../../models');
 
-//GET post by user_id api/posts/ --> maybe in dashboard, need req.session
-router.get('/', async (req, res) => {
-    try {
-        const postData = await Post.findAll({
-            where: {user_id: 1},
-            include: [{model: User}]
-        })
-        res.status(200).json(postData);
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
+// //GET post by user_id in dashboard
+
 
 //GET post by postid api/posts/:id 
 router.get('/:id', async (req, res) => {

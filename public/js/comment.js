@@ -21,7 +21,7 @@ async function commentSubmitHandler(event) {
             alert(response.statusText)
         }
     } else {
-        alert(response.statusText, "Please include a comment!")
+        alert("Please include a comment!" + response.statusText)
     }
 }
 

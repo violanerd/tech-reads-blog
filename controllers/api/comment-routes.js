@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
 });
 
 //GET api/comments/:id 
-// --- don't need this route, attached to post get
+// --- don't need this route
 
 //POST create comment api/comments
 router.post('/', async (req, res) => {  

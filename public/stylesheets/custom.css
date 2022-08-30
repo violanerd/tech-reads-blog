@@ -45,3 +45,9 @@ div.top-bar {
     padding: 0.5rem;
     font-weight: bold;
 }
+input#post-title {
+    width: 100%;
+}
+#add-comment {
+    width: 100%;
+}

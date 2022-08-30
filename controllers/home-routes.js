@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Comment} = require('../models');
-//const withAuth = require('../utils/withAuth')
+
 
 
 router.get('/', async (req, res) => {
@@ -27,7 +27,7 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
-router.get('/post/:id', async(req,res) => { // added withauth here to test
+router.get('/post/:id', async(req,res) => { 
     try {
         const postData = await Post.findByPk(req.params.id, {
             include: [
