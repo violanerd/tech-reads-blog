@@ -27,4 +27,4 @@ Comment.belongsTo(Post, {
 
 module.exports = {User, Post, Comment}
 
-// Don't capitalize the I!
+// Capitalization issue
