@@ -14,7 +14,7 @@ async function updatePostHandler(event){
             headers: {'Content-Type': 'application/json'}
         })
         console.log(response);
-        if (response.ok) {// make this look like lower one
+        if (response.ok) {
             alert("Post Updated");
             document.location.replace('/dashboard')
         } else {

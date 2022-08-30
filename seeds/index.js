@@ -17,50 +17,50 @@ const userdata = [
 ];
 const commentdata = [
     {
-        comment_text: "Yo",
+        comment_text: "A sticky situation",
         user_id: 1,
         post_id: 1
     },
     {
-        comment_text: "Hey",
+        comment_text: "Hmm I wonder if you tried anything different?",
         user_id: 2,
         post_id: 1
     },
     {
-        comment_text: "Banana",
+        comment_text: "There are, sometimes it is hard to know where to start!",
         user_id: 3,
         post_id: 2
     },
     {
-        comment_text: "Test 1",
+        comment_text: "I agree",
         user_id: 3,
         post_id: 3
     },
     {
-        comment_text: "Test 2",
+        comment_text: "#Python forever",
         user_id: 2,
         post_id: 3
     }
 ]
 const postdata = [
     {
-        title: "Oranges",
-        post_content: "Oranges are yucky",
+        title: "Stuck on Handlebars",
+        post_content: "Wondering how to conditionally render html in handlebars, tried to write a handlebars helper function.",
         user_id: 1
     }, 
     {
-        title: "Bananas",
-        post_content: "Bananas are yummy",
+        title: "Npm Package Manager",
+        post_content: "So many things to choose from!",
         user_id: 3
     }, 
     {
-        title: "Peanuts",
-        post_content: "Dangerous",
+        title: "Why Node.js is the best",
+        post_content: "Lots of functionality",
         user_id: 2
     },
     {
-        title: "Apples",
-        post_content: "Yummy",
+        title: "Full Stack Development",
+        post_content: "So many parts to it!",
         user_id: 1
     }
 ]

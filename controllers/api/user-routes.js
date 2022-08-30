@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { User, Post, Comment} = require('../../models');
-//const withAuth = require('../../utils/authguard');
 
 // GET api/users
 router.get('/', async (req, res) => {
@@ -16,7 +15,7 @@ router.get('/', async (req, res) => {
 
 //GET api/users/:id 
 router.get('/:id', async (req, res) => {
-    console.log(req.params.id)
+    
     try {
         const userData = await User.findByPk(req.params.id, {
             //attributes: {exclude: ['password']},
