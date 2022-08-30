@@ -1,0 +1,12 @@
+<div class="post-list">
+    {{#each posts}}
+    <article class="post">
+        <div class="title">
+            <a href="dashboard/edit/{{id}}">
+            <h4>{{title}}</h4></a><span>{{ format_date createdAt}}</span>
+        </div>
+    </article>
+    {{/each}}
+</div>
+
+{{> create-post}}

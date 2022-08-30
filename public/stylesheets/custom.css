@@ -1,0 +1,47 @@
+.title {
+    background-color: lightgrey;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+span {
+    font-size: small;
+}
+.post-content {
+    padding: 0.3rem;
+    margin: 0.3rem;
+}
+header>nav a, header>nav a:visited {
+    border: none;
+}
+.login-form {
+    border: 1px solid gray;
+    padding: 1rem;
+    border-radius: 15px;
+}
+hr {
+    border: solid 1rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+button#create-post,button#update-post,button#delete-post {
+    width: 100%;
+}
+.comment-author {
+    margin-bottom: 1rem;
+    font-size: small;
+}
+.comment-text {
+    font-size: smaller;
+}
+div.top-bar {
+    background-color: var(--border);
+    margin: 1rem auto;
+    padding: 0.5rem;
+    font-weight: bold;
+}
