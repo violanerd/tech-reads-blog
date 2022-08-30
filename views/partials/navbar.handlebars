@@ -2,8 +2,11 @@
         <h1><a href="/">Tech Reads Blog</a></h1>
         <nav>
         <a href="/"><button id="home">Home</button></a>
+        {{#if loggedIn}}
         <a href="/dashboard"><button id="dashboard">Dashboard</button></a>
-        <a href="/login"><button id="login">Login</button></a>
         <a href="/"><button id="logout" class="">Logout</button></a>
+        {{else}}
+        <a href="/login"><button id="login" class="">Login</button></a>
+        {{/if}}
     </nav>
 </header>
